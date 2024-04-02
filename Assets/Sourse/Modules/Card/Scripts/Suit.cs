@@ -2,13 +2,11 @@
 
 namespace Cards
 {
-    internal abstract class Suit : MonoBehaviour
+    enum Suit
     {
-        
-        public Suit Get()
-        {
-            return this;
-        }
-
+       Hearts,
+       Spades,
+       Diamonts,
+       Crosses
     }
 }
