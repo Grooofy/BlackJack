@@ -6,17 +6,14 @@ namespace Cards
 {
     internal class Card
     {
-        public int Value { get; private set; }
+        internal int Value { get; private set; }
 
-        public Suit Suit { get; private set; }
+        internal Suit Suit { get; private set; }
 
-        public CardData Data { get; private set; }
-
-        public Card(int value, Suit suit, CardData data)
+        internal Card(CardData data)
         {
-            Value = value;
-            Suit = suit;
-            Data = data;
+            Value = data.ValueNumber;
+            Suit = data.EnumSuit;
         }
     }
 }

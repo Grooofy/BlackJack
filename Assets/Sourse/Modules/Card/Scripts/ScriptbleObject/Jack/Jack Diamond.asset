@@ -13,5 +13,7 @@ MonoBehaviour:
   m_Name: Jack Diamond
   m_EditorClassIdentifier: 
   _value: {fileID: 21300000, guid: cec5f0802f2ade942904a5ad01742285, type: 3}
-  _valueImage: {fileID: 0}
+  _valueImage: {fileID: 21300000, guid: c7d98cfd5d8a7974884fa7ddcc5cedd4, type: 3}
   _suit: {fileID: 21300000, guid: a633ead11c208cf4f81d3077acf85ce1, type: 3}
+  _enumSuit: 1
+  _valueNumber: 2

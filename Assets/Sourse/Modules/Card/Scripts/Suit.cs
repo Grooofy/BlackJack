@@ -2,11 +2,11 @@
 
 namespace Cards
 {
-    enum Suit
+    public enum Suit
     {
-       Hearts,
-       Spades,
-       Diamonts,
-       Crosses
+        Hearts,
+        Diamonts,
+        Crosses,
+        Spades
     }
 }

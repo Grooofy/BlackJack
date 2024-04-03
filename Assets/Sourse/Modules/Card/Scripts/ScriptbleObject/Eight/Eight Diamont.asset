@@ -15,3 +15,5 @@ MonoBehaviour:
   _value: {fileID: 21300000, guid: 9a8d06bf17036bf4d9a9784b5a85532b, type: 3}
   _valueImage: {fileID: 21300000, guid: 780c272a97e05ee449621c62ad64a2ed, type: 3}
   _suit: {fileID: 0}
+  _enumSuit: 1
+  _valueNumber: 8
