@@ -10,10 +10,13 @@ namespace Cards
 
         public Suit Suit { get; private set; }
 
-        public Card(int value, Suit suit)
+        public CardData Data { get; private set; }
+
+        public Card(int value, Suit suit, CardData data)
         {
             Value = value;
             Suit = suit;
+            Data = data;
         }
     }
 }

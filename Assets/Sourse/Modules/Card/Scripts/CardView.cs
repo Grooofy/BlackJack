@@ -5,22 +5,22 @@ using UnityEngine.UI;
 
 namespace Cards
 {
-    public class CadrView : MonoBehaviour
+    public class CardView : MonoBehaviour
     {
         [SerializeField] private Image _value;
         [SerializeField] private Image _valueImage;
         [SerializeField] private Image _suit;
 
 
-        public void InitCard(Image value, Image valueImage, Image suit = null)
+        public void InitCard(Sprite value, Sprite valueImage, Sprite suit = null)
         {
-            _value = value;
-            _valueImage = valueImage;
+            _value.sprite = value;
+            _valueImage.sprite = valueImage;
 
             if (suit != null)
             {
                 _suit.enabled = true;
-                _suit = suit;
+                _suit.sprite = suit;
             }
             else
             {
