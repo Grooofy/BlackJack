@@ -9,6 +9,5 @@ namespace Deck
     internal class DeckView
     {
 
-
     }
 }
