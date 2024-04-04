@@ -1,8 +1,8 @@
 {
-    "name": "BlackJack",
-    "rootNamespace": "BlackJack",
+    "name": "Deck",
+    "rootNamespace": "Deck",
     "references": [
-        "GUID:fd6452317b3b3b14981007164c7d0927"
+        "GUID:3884bf289daa3664f948ff1e5de525e0"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],

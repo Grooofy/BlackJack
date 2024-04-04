@@ -4,7 +4,7 @@ namespace Cards
 {
 
     [CreateAssetMenu(fileName = "Card name", menuName = "New Card", order = 51)]
-    internal class CardData : ScriptableObject
+    public class CardData : ScriptableObject
     {
         [SerializeField] private Sprite _value;
         [SerializeField] private Sprite _valueImage;
