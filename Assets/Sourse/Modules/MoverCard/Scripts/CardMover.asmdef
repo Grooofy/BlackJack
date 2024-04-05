@@ -1,0 +1,16 @@
+{
+    "name": "CardMover",
+    "rootNamespace": "CardMover",
+    "references": [
+        "GUID:3884bf289daa3664f948ff1e5de525e0"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

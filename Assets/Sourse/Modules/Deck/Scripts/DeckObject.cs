@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Cards;
+using System;
 
 namespace Deck
 {
@@ -11,6 +12,9 @@ namespace Deck
         [SerializeField] private Card _card;
         [SerializeField] RectTransform rectTransform;
 
+        internal Action DeckComplete;
+
+
         private List<Card> _cards = new List<Card>();
 
         public void CreateDeck()
@@ -19,6 +23,7 @@ namespace Deck
             {
                 _cards.Add(_card.Create(card, rectTransform));
             }
+            DeckComplete?.Invoke();
         }
     }
 }

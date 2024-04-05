@@ -207,6 +207,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1029530713 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4173501411707911946, guid: 8bf90b8ff26b9f3499c155d083a5ca90, type: 3}
+  m_PrefabInstance: {fileID: 1664320416}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1210601715
 GameObject:
   m_ObjectHideFlags: 0
@@ -403,6 +408,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Deck
       objectReference: {fileID: 0}
+    - target: {fileID: 6956126444925359007, guid: 8bf90b8ff26b9f3499c155d083a5ca90, type: 3}
+      propertyPath: _cover
+      value: 
+      objectReference: {fileID: 1029530713}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8bf90b8ff26b9f3499c155d083a5ca90, type: 3}
 --- !u!224 &1763649801 stripped
