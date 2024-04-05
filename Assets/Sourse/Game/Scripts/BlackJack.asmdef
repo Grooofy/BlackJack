@@ -2,7 +2,9 @@
     "name": "BlackJack",
     "rootNamespace": "BlackJack",
     "references": [
-        "GUID:fd6452317b3b3b14981007164c7d0927"
+        "GUID:fd6452317b3b3b14981007164c7d0927",
+        "GUID:109d8666429c1f94abcb6838e5007788",
+        "GUID:e54c7c2e3ac85f14484c73a3cf415c3c"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],

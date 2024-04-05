@@ -2,7 +2,8 @@
     "name": "CardMover",
     "rootNamespace": "CardMover",
     "references": [
-        "GUID:3884bf289daa3664f948ff1e5de525e0"
+        "GUID:3884bf289daa3664f948ff1e5de525e0",
+        "GUID:e54c7c2e3ac85f14484c73a3cf415c3c"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],

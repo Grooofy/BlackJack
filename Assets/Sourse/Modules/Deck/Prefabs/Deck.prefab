@@ -209,6 +209,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6956126444925359004}
   - component: {fileID: 6956126444925359007}
+  - component: {fileID: -1080548237513794975}
   m_Layer: 5
   m_Name: Deck
   m_TagString: Untagged
@@ -288,3 +289,17 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 817bdbe2f162dfc409bbc1704ad6f591, type: 2}
   _card: {fileID: 6639334446460861051, guid: eabb7141e501cea48ba4b06a27ebf7a8, type: 3}
   rectTransform: {fileID: 6956126444925359004}
+--- !u!114 &-1080548237513794975
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6956126444925359005}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 22fe441108a23734eb8ebab1e11bf2a6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _deckObject: {fileID: 6956126444925359007}
+  _cover: {fileID: 4173501411707911946}
