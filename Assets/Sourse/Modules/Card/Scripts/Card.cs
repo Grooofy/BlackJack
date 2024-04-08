@@ -10,11 +10,11 @@ namespace Cards
         private CardObject _card;
 
            
-        public Card Create(CardData cardData, RectTransform rectTransform)
+        public Card Create(CardData cardData, Transform transform)
         {
             _card = new CardObject(cardData);
 
-            var newGameObject = Instantiate(_cardView.gameObject, rectTransform);
+            var newGameObject = Instantiate(_cardView.gameObject, transform);
             newGameObject.name = $"{cardData.ValueNumber} {cardData.EnumSuit}";
 
             var newCardVeiw = newGameObject.GetComponent<CardView>();

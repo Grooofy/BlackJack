@@ -1,39 +1,37 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using Cards;
-using UnityEditor;
-using DG;
 using DG.Tweening;
+using Codice.Client.BaseCommands.BranchExplorer;
+
 
 namespace CardMover
 {
     public class Mover : MonoBehaviour
     {
-        [SerializeField] private RectTransform _finishPoint;
-        [SerializeField] private float _speed;
+        [SerializeField] private float _duration;
 
-        private RectTransform _startPosition;
+        private Transform _startPosition;
         private Vector3 _endPosition;
+        private Tween _tween;
         private bool _isMove;
 
-        public void InitCard(RectTransform startPosition)
+        public void InitObject(Transform startPosition, Transform finishPosition)
         {
             _startPosition = startPosition;
 
-            _endPosition = new Vector3(_finishPoint.position.x, _finishPoint.position.y, _finishPoint.position.z);
+            _endPosition = new Vector3(finishPosition.position.x, finishPosition.position.y, finishPosition.position.z);
 
             if (_startPosition == null)
-                InitCard(startPosition);
+                InitObject(startPosition, finishPosition);
 
-            _isMove = true ;
+            _isMove = true;
         }
 
         private void Update()
         {
             if (_isMove)
             {
-                 _isMove = _startPosition.DOMove(_endPosition, _speed).IsComplete();
+                _tween = _startPosition.DOMove(_endPosition, _duration);
+                _isMove = _tween.IsComplete();
             }
         }
 

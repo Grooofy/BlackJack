@@ -7,9 +7,9 @@ namespace Cards
 {
     internal class CardView : MonoBehaviour
     {
-        [SerializeField] private Image _value;
-        [SerializeField] private Image _valueImage;
-        [SerializeField] private Image _suit;
+        [SerializeField] private SpriteRenderer _value;
+        [SerializeField] private SpriteRenderer _valueImage;
+        [SerializeField] private SpriteRenderer _suit;
 
 
         internal void InitCard(Sprite value, Sprite valueImage, Sprite suit = null)

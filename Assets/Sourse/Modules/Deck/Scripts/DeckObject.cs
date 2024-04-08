@@ -10,7 +10,6 @@ namespace Deck
     {
         [SerializeField] private List<CardData> _cardsData;
         [SerializeField] private Card _card;
-        [SerializeField] RectTransform rectTransform;
 
         internal Action DeckComplete;
 
@@ -21,7 +20,7 @@ namespace Deck
         {
             foreach (var card in _cardsData)
             {
-                _cards.Add(_card.Create(card, rectTransform));
+                _cards.Add(_card.Create(card, transform));
             }
             DeckComplete?.Invoke();
         }

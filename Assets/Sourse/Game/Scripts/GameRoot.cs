@@ -15,7 +15,7 @@ namespace BlackJack
         private void Start()
         {
             deck.CreateDeck();
-
+            
         }
     }
 }
