@@ -1,4 +1,3 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Cards;
@@ -20,9 +19,15 @@ namespace Deck
         {
             foreach (var card in _cardsData)
             {
-                _cards.Add(_card.Create(card, transform));
+                _cards.Add(_card.CreateNew(card, transform));
             }
             DeckComplete?.Invoke();
+        }
+
+        public Card GetRandomCard()
+        {
+            var randomCard = _cards[UnityEngine.Random.Range(0, _cards.Count)];
+            return randomCard;  
         }
     }
 }

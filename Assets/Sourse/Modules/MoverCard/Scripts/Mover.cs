@@ -1,6 +1,6 @@
 using UnityEngine;
 using DG.Tweening;
-using Codice.Client.BaseCommands.BranchExplorer;
+
 
 
 namespace CardMover
@@ -18,10 +18,10 @@ namespace CardMover
         {
             _startPosition = startPosition;
 
-            _endPosition = new Vector3(finishPosition.position.x, finishPosition.position.y, finishPosition.position.z);
-
-            if (_startPosition == null)
+            if (_startPosition == null || finishPosition == null)
                 InitObject(startPosition, finishPosition);
+
+            _endPosition = new Vector3(finishPosition.position.x, finishPosition.position.y, finishPosition.position.z);
 
             _isMove = true;
         }
