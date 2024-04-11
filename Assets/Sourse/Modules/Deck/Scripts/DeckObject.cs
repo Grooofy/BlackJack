@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Cards;
 using System;
+using MegaGigaStack;
 
 namespace Deck
 {
@@ -13,7 +14,7 @@ namespace Deck
         internal Action DeckComplete;
 
 
-        private List<Card> _cards = new List<Card>();
+        private SuperSonicStack<Card> _cards = new SuperSonicStack<Card>();
 
         public void CreateDeck()
         {

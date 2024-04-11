@@ -2,7 +2,8 @@
     "name": "Deck",
     "rootNamespace": "Deck",
     "references": [
-        "GUID:3884bf289daa3664f948ff1e5de525e0"
+        "GUID:3884bf289daa3664f948ff1e5de525e0",
+        "GUID:5921f6f019f98ba46a1df3d6b6f43dce"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],
