@@ -1,3 +1,5 @@
+using System;
+
 namespace MegaGigaStack
 {
     public class SuperSonicStack<T>
@@ -14,7 +16,6 @@ namespace MegaGigaStack
         public T this[int index]
         {
             get => _values[index];
-            set => _values[index] = value;
         }
 
         private T[] _values;
@@ -47,7 +48,18 @@ namespace MegaGigaStack
             return newValue;
         }
 
+        public void Shuffle()
+        {
+            T[] newArray = new T[_values.Length];
+            
 
+        }
+
+        private int CreateRandomNumber()
+        {
+            Random random = new Random();
+            return random.Next(0, _values.Length + 1);
+        }
     }
 
 
