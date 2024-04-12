@@ -16,9 +16,10 @@ namespace Cards
             var newCardVeiw = newGameObject.GetComponent<CardView>();
             ShowCard(newCardVeiw, cardData);
 
-            Value = cardData.ValueNumber;
+            var newCard = newGameObject.GetComponent<Card>();
+            newCard.Value = cardData.ValueNumber;
 
-            return newGameObject.GetComponent<Card>();
+            return newCard;
         }             
 
 

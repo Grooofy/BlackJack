@@ -1,28 +1,40 @@
 using UnityEngine;
 using Deck;
 using CardMover;
+using Players;
+using UnityEngine.UI;
 
 namespace BlackJack
 {
     public class GameRoot : MonoBehaviour
     {
-        [SerializeField] private DeckObject deck;
-        [SerializeField] private Mover mover;
-        [SerializeField] private Transform player;
+        [SerializeField] private DeckObject _deck;
+        [SerializeField] private Player _player;
+        [SerializeField] private Button _getButton;
+        [SerializeField] private Button _toggleButton;
+
+
+        private void OnEnable()
+        {
+            _getButton?.onClick.AddListener(PlayerGetCard);
+        }
+
+        private void OnDisable()
+        {
+            _getButton?.onClick.RemoveListener(PlayerGetCard);
+        }
 
 
         private void Start()
         {
-            deck.CreateDeck();
-
+            _deck.CreateDeck();
         }
 
-        private void Update()
+        private void PlayerGetCard()
         {
-            if (Input.GetKeyDown(KeyCode.Space))
-            {
-                mover.InitObject(deck.GetFirstCard().transform, player);
-            }
+            _player.GetCard(_deck);
         }
+
+       
     }
 }
