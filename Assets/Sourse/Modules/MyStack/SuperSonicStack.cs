@@ -1,28 +1,23 @@
-
-using Mono.Cecil.Cil;
-using System;
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
 namespace MegaGigaStack
 {
-    public class SuperSonicStack<T> 
+    public class SuperSonicStack<T>
     {
-        private T[] _values;
+        public int Count;
 
         public SuperSonicStack()
         {
             _values = new T[0];
+            Count = _values.Length;
         }
 
-        public int Count;
 
         public T this[int index]
         {
             get => _values[index];
             set => _values[index] = value;
         }
+
+        private T[] _values;
 
         public void Add(T value)
         {
@@ -34,10 +29,25 @@ namespace MegaGigaStack
             {
                 newArray[i] = _values[i - 1];
             }
-
             _values = newArray;
-            Count = _values.Length;
         }
+
+        public T Peek()
+        {
+            T newValue = _values[0];
+
+            T[] newArray = new T[_values.Length - 1];
+
+            for (int i = 0; i < newArray.Length; i++)
+            {
+                newArray[i] = _values[i + 1];
+            }
+            _values = newArray;
+
+            return newValue;
+        }
+
+
     }
 
 

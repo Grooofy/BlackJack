@@ -13,7 +13,7 @@ namespace Deck
 
         internal Action DeckComplete;
 
-
+        private CardData CardData;
         private SuperSonicStack<Card> _cards = new SuperSonicStack<Card>();
 
         public void CreateDeck()
@@ -28,7 +28,13 @@ namespace Deck
         public Card GetRandomCard()
         {
             var randomCard = _cards[UnityEngine.Random.Range(0, _cards.Count)];
-            return randomCard;  
+            return randomCard;
+        }
+
+        public Card GetFirstCard()
+        {
+            var firstCArd = _cards.Peek();
+            return firstCArd;
         }
     }
 }

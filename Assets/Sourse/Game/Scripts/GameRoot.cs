@@ -14,14 +14,14 @@ namespace BlackJack
         private void Start()
         {
             deck.CreateDeck();
-            
+
         }
 
         private void Update()
         {
-            if (Input.GetKeyDown(KeyCode.Space)) 
+            if (Input.GetKeyDown(KeyCode.Space))
             {
-                mover.InitObject(deck.GetRandomCard().transform, player);
+                mover.InitObject(deck.GetFirstCard().transform, player);
             }
         }
     }
