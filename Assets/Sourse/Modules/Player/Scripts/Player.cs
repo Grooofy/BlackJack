@@ -8,16 +8,17 @@ using UnityEngine;
 
 namespace Players
 {
-    public class Player : MonoBehaviour
+    public abstract class Player : MonoBehaviour
     {
         [SerializeField] private Mover _mover;
         private SuperSonicStack<Card> _cards = new SuperSonicStack<Card>();
 
         internal Action<int> GetCards;
+        internal Action<int> Taking;
 
-        private int _index = 0; 
+        internal int _index = 0; 
 
-        public void GetCard(DeckObject deck)
+        public virtual void GetCard(DeckObject deck)
         {
             Get(deck);
             _mover.InitObject(_cards.Peek().transform, transform.GetChild(_cards.Count - 1));
@@ -26,10 +27,12 @@ namespace Players
 
         internal void CalculatePoints()
         {
+            _index = 0;
             for (int i = 0; i < _cards.Count; i++)
             {
                 _index += _cards[i].Value;
             }
+            Taking?.Invoke(_index);
         }
 
         internal void Get(DeckObject deck)
